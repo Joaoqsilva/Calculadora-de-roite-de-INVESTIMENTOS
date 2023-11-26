@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"  href="/mtals.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://kit.fontawesome.com/a47f5aced7.js" crossorigin="anonymous"></script>
+  <title>CotaInvest</title>
+</head>
+   
+<body>
+ <div class="opacity"></div>
+  <div class="hero"> </div>
+  <button id="btnResultChange" onclick="mudarResultado()"><i class="fa-solid fa-align-center"></i></button>
+  <div id="CalcularCotas">
+    <div id="links">
+      <div id="hero"></div>
+      
+      <a href="#"  id="calcular" onclick="Untranslate()">Compra de Cotas </a>
+      <a href="#"   id="translate" onclick="Totranslate()">Cacular Retorno</a>
+    </div>
+     <!-- <h4 style="color:white; ">NÃO USE VIRGULA USE PONTO " . " </h4>   -->
+
+    <div class="form-1">
+      <form action="">
+        <!-- aqui vai calcular o retorno financeiro em tantos tempos -->
+        
+        <label for="myInput" class="label">
+          <!-- <span class="label-title">My nice input</span> -->
+          <!-- <input type="text" id="cotas" required placeholder="Quantia de Dinheiro (R$):" value="" autocomplete="off" /> -->
+          <input id="cotas" class="input" name="number" placeholder="Quantia de Dinheiro (R$):." type="number">
+        </label>
+        <label for="myInput" class="label">
+          <!-- <span class="label-title">My nice input</span> -->
+          <!-- <input type="text" id="valorcota" required placeholder="Valor da cota (R$):" value="" autocomplete="off" /> -->
+          <input id="valorcota" class="input" name="number" placeholder="Valor da cota (R$):" type="number" lang="pt-br">
+        </label>
+       
+        <p class="classResultado" id="result">Resultado</p>
+
+        <div id="btns">
+          <button  onclick="calcularCotas()">Calcular</button>
+          <button  onclick="clearFields()">Limpar</button>
+        </div>
+      </form>
+     
+    </div>
+
+    <div class="form-2">
+      <form action="">
+        <!-- aki vai calcular quantas cotas dao para comprar com tantos dinheros   -->
+        <div id="inpts">
+          <label for="myInput" class="label">
+          <input
+          class="input inputMinus"
+          type="text" 
+          id="qtdcotas_2"
+          required 
+          placeholder="Quantas cotas possui ?:" 
+          autocomplete="off" />
+        </label>
+        
+          <label for="myInput" class="label">
+          <input 
+          class="input inputMinus"
+          type="text" 
+          id="time" required 
+          placeholder="Quanto tempo (em meses):" 
+          maxlength="2"
+          autocomplete="off" />
+        </label>
+        </div>
+
+       
+
+        <label for="myInput" class="label">
+            <input class="input" type="text" id="rendimento" placeholder="Qual o rendimento de cada cota (R$):" required
+          autocomplete="off" class="input"/> 
+          </label>
+
+        <p class="classResultado_2" id="result_2">Resultado</p>
+
+        <div id="btns">
+          <button onclick="somarQtdCotas()">Calcular</button>
+          <button onclick="clearForm()">Limpar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main_2.js"></script>
+</body>
+
+</html>
